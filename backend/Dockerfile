@@ -12,8 +12,12 @@ RUN bun install
 COPY . .
 
 # Expose the application port
+# Socketio
 EXPOSE 3000
+# Apollo 
 EXPOSE 3002
+# Express > Passport
+EXPOSE 3003
 
 # Run the Bun.js server
 CMD ["bun", "run", "index.js"]

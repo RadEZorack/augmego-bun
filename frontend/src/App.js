@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
+import Login from './Login';
+
 
 const socket = io("http://localhost:3000"); // Connect to the backend
 
@@ -25,6 +27,7 @@ function App() {
 
     return (
         <div>
+            <Login />
             <h1>Real-Time Chat</h1>
             <input
                 value={input}
