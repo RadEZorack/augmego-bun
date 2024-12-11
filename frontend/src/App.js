@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 import Login from './Login';
 
 
-const socket = io("http://localhost:3000"); // Connect to the backend
+const socket = io("http://localhost:3001"); // Connect to the backend
 
 function App() {
     const [messages, setMessages] = useState([]);

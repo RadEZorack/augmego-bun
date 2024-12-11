@@ -13,7 +13,7 @@ COPY . .
 
 # Expose the application port
 # Socketio
-EXPOSE 3000
+EXPOSE 3001
 # Apollo 
 EXPOSE 3002
 # Express > Passport

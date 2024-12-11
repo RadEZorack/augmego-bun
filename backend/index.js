@@ -185,18 +185,19 @@ io.on("connection", (socket) => {
 });
 
 // Start the HTTP server
-const PORT_0 = 3000;
-httpServer.listen(PORT_0, () => {
-    console.log(`🚀 Socketio Server is running on http://localhost:${PORT_0}`);
+const PORT_1 = 3001;
+httpServer.listen(PORT_1, () => {
+    console.log(`🚀 Socketio Server is running on http://localhost:${PORT_1}`);
 });
 
+const PORT_2 = 3002;
 const startApolloServer = async () => {
     const server = new ApolloServer({
         schema: await neoSchema.getSchema(),
     });
 
     const { url } = await startStandaloneServer(server, {
-        listen: { port: 3002 }, // Apollo
+        listen: { port: PORT_2 }, // Apollo
         context: async () => ({ driver }),
     });
 
